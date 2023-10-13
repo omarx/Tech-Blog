@@ -30,8 +30,7 @@ Welcome to our Tech Blog, a platform meticulously crafted utilizing technologies
         ```
 
 ## 📸 Screenshot
-
-*Screenshot will be added soon.*
+<img width="1486" alt="Screenshot 2023-10-13 at 3 35 10 PM" src="https://github.com/omarx/Tech-Blog/assets/4944767/edfe60ad-e1b3-45b6-850d-a9137294ce5c">
 
 ## ❓ Questions & Support
 
