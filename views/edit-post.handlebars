@@ -1,0 +1,22 @@
+<div class="d-flex flex-column align-items-center">
+    <article class="card w-75 card-border">
+        <div class="card-header card-color d-flex align-items-center justify-content-between">
+            <h2 class="card-title card-text-color mb-0">Update Post</h2>
+        </div>
+        <div class="card-body card-body-color">
+            <div class="p-1">   
+            <label>Title</label></br>
+            <input type="text" class="w-100" id="titleInput" placeholder='{{myPostData.title}}' />
+            </br>
+            </div>
+            <div class="p-1">
+            <label>Content</label></br>
+            <textarea class="form-control" id="bodyInput" class="w-100" placeholder="{{myPostData.body}}"></textarea>
+            </div>
+            <button type="button" id="createBtn" value="{{myPostData.id}}" class="btn btn-secondary w-100 p-2 mt-4">Update</button>
+            <button type="button" id="deleteBtn" value="{{myPostData.id}}" class="btn btn-secondary w-100 p-1 mt-2">Delete</button>
+        </div>
+    </article>
+</div>
+<script src="/js/edit-post.js"></script>
+<script src="/js/logout.js"></script>

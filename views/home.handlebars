@@ -1,0 +1,13 @@
+<div class="d-flex flex-column align-items-center">
+    {{#each posts}}
+    <article class="card w-75 card-border">
+        <div class="card-header card-color d-flex align-items-center justify-content-between">
+            <h2 class="card-title card-text-color mb-0"><a class="no-underline-no-font card-text-color" href="/post/{{id}}">{{title}}</a></h2>
+            <span class="card-text-color author">Posted by {{user.username}} on {{formateDate createdAt}}</span>
+        </div>
+        <div class="card-body card-body-color">
+            <p class="card-text text-center card-body-text">{{body}}</p>
+        </div>
+    </article>
+    {{/each}}
+</div>

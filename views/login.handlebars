@@ -1,0 +1,25 @@
+<div class="d-flex flex-column align-items-center">
+    <article class="card w-75 card-border">
+        <div class="card-header card-color d-flex align-items-center justify-content-between">
+            <h2 class="card-title card-text-color mb-0">Login</h2>
+        </div>
+        <div class="card-body card-body-color">
+            <div class="p-1">   
+            <label>Username</label></br>
+            <input type="text" class="w-100" id="uInput" name="userOrpass" /></br>
+            </div>
+            <div class="p-1">
+            <label>Password</label></br>
+            <input type="password" id="pInput" class="w-100" name="password" />
+            </div>
+            <p class="card-text text-center card-body-text">{{body}}</p>
+            <div class="d-flex flex-column align-items-center">
+            <button type="button" id="loginBtn" class="btn btn-secondary w-100 p-1">Login!</button>
+            </div>
+            <div class="p-1">
+                <p><a class="no-underline link-underline-opacity-100-hover" href="/signup"> Sign up instead</a></p>
+            </div>
+        </div>
+    </article>
+</div>
+<script src="js/login.js"></script>

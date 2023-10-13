@@ -1,0 +1,58 @@
+<div class="d-flex flex-column align-items-center">
+    <article class="card w-75 card-border">
+        <div class="card-header card-color d-flex align-items-center justify-content-between">
+            <h2 class="card-title card-text-color mb-0"><a class="no-underline-no-font card-text-color" href="/post/{{id}}">{{singlePostData.title}}</a></h2>
+            <span class="card-text-color author">Posted by {{singlePostData.user.username}} on {{formateDate createdAt}}</span>
+        </div>
+        <div class="card-body card-body-color">
+            <p class="card-text text-center card-body-text">{{singlePostData.body}}</p>
+        </div>
+    </article>
+</div>
+{{#if loggedIn}}
+<div class="d-flex flex-column align-items-center not-visible" id="CommentBox">
+    <article class="card w-75 card-border">
+        <div class="card-header card-color d-flex align-items-center justify-content-between">
+            <h2 class="card-title card-text-color mb-0">Add comment</h2>
+        </div>
+        <div class="card-body card-body-color">
+            <div class="p-1">
+            <label>Comment</label></br>
+            <textarea class="form-control" id="commentInput" class="w-100" ></textarea>
+            </div>
+            <button type="button" id="addCommentBtn" value={{singlePostData.id}} class="btn btn-secondary w-100 p-2 mt-4">Add Comment</button>
+        </div>
+    </article>
+</div>
+{{/if}}
+{{#if singlePostData.comments}}
+    {{#each singlePostData.comments}}
+        <div class="d-flex flex-column align-items-center">
+            <article class="card w-75 card-border">
+                <div class="card-header card-color d-flex align-items-center justify-content-between p-4"> 
+                </div>
+                <div class="card-body card-body-color">
+                    <p class="card-text card-body-text">{{this.body}}</p>
+                    <p class="card-text card-body-text">- {{this.user.username}} , {{formateDate this.createdAt}}</p>
+                </div>
+            </article>
+        </div>
+    {{/each}}
+{{/if}}
+
+
+{{#if loggedIn}}
+ <div class="d-flex flex-column align-items-center btm-position ">
+    {{!-- no-underline card-body-text card-text-color --}}
+        <button type="button" class="btn card-color w-18 card-body-text card-text-color btm-position" 
+        id="addComment">
+          Add Comment 
+        </button>
+    </div> 
+{{/if}}
+
+
+
+
+<script src="/js/add-comment.js"></script>
+<script src="/js/logout.js"></script>
